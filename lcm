@@ -2,21 +2,19 @@
 int lcm(int, int);
 int main()
 {
-    int a, b, result;
+    int a, b, soln;
     int prime[100];
     printf("Input the first number: ");
     scanf("%d", &a);
     printf("Input the second number: ");
     scanf("%d",&b);
-    result = lcm(a, b);
-    printf("LCM of %d and %d = %d\n", a, b, result);
+    soln = lcm(a, b);
+    printf("LCM of %d and %d = %d\n", a, b, soln);
     return 0;
 }
- 
 int lcm(int a, int b)
 { 
     static int c=1;
- 
     if (c%a==0 && c%b==0)
     {
         return c;
