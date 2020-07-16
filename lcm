@@ -17,11 +17,11 @@ int lcm(int a, int b)
 { 
     static int common = 1;
  
-    if (common % a == 0 && common % b == 0)
+    if (c%a==0 && c%b==0)
     {
-        return common;
+        return c;
     }
-    common++;
+    c++;
     lcm(a, b);
-    return common;
+    return c;
 }
