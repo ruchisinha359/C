@@ -1,0 +1,21 @@
+#include <stdio.h>
+int addthedigits(int);
+int main()
+{
+  int a, soln;
+  printf("Input number: ");
+  scanf("%d",&a);
+  soln = addthedigits(a);
+  printf("Sum of digits: %d\n", soln);
+  return 0;
+}
+int addthedigits(int a) 
+{
+  int sum = 0;
+  if (a == 0) 
+  {
+    return 0;
+  }
+  sum = a%10 + addthedigits(a/10);
+  return sum;
+}
