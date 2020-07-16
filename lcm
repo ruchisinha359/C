@@ -15,7 +15,7 @@ int main()
  
 int lcm(int a, int b)
 { 
-    static int common = 1;
+    static int c=1;
  
     if (c%a==0 && c%b==0)
     {
