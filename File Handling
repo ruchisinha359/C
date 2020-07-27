@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    FILE *fp;
+    int i,j;
+    char c;
+    fp=fopen("RANDOM.txt","w");
+    printf("Input to the reverse function: \n");
+    while((c=getchar())!='\n')
+    putc(c,fp);
+    j =ftell(fp);
+    fclose(fp);
+    i=0;
+    fp=fopen("RANDOM.txt","r");
+    while(feof(fp)==0)
+    {
+        fseek(fp,i,0);
+        if((c=getc(fp))!=EOF)
+        i++;
+    }
+    printf("Output: \n");
+    fseek(fp,-1,1);
+    do
+        {
+        printf("%c",getc(fp));
+        }
+    while((fseek(fp,-2,1))==0);
+    putchar('\n');
+    fclose(fp);
+} 
